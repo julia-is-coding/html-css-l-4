@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Practice-4</title>
+    <style>
+        div {
+        background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Some-are-different-wide-images-PIC-WPB009649.jpg");
+        background-color: red; /* --> менее приоритетен, чем background-image */
+
+        height: 500px;
+        width: 600px;
+
+        /* Контроль картинки по вертикале: */
+
+        /* background-size: cover;  --> размещает картинку так, чтоб она влезла чётко по высоте 
+        (чаще всего используется; из-за того, что постоянно меняется размер экрана, высоту нам легче контроллировать) */
+        
+        /* Контроль картинки по горизонтали: */
+
+        /* background-size: contain; --> фиксирует размер картики согласно её ширине 
+        (по ширине картинка чётко влазит в размер контейнера, но не означает, что она по высоте будет влазить) */
+
+        background-size: 50px; /* --> будет по ширине. 
+        Если указать в %, то картика будет занимать этот % от размера контейнера. */
+
+        background-repeat: no-repeat; /* --> по умолчанию repeat */
+
+        /* Чтоб осталось только одно изображение (чтоб отменить дублирование) в background-size: <размер>,
+        указываем для background-repeat: no-repeat. */
+
+        /* Более расширенные версии:
+        - background-repeat-x
+        - background-repeat-y. */
+
+        /* --- */
+
+        /* Перемещение картинки в рамках контейнера: */
+
+        background-position: 50%; /* --> самое приемлемое значение.
+        Всё равно, что:
+        - background-position: center;
+        - background-position: center center;
+        - background-position: 50% 50%; --> первое значение по оси х, второе - по у */
+
+        /* background-position: 50% 0; --> картинка будет отображаться по центру, но сверху */
+
+        /* background-position: 20px 0; --> указываем конкретное значение */
+
+        /* background-position: 100% 0; --> Важно понимать, что, когда указываем значение в 100%, 
+        то картинка не вылазит за рамки контейнера. 
+        Чтоб картинка вышла за рамки контейнера, указываем больше, чем 100%. */
+        
+        /* background-position: 100% 100%; --> картинка будет справа внизу */
+        /* background-position: 0 50%; --> картинка будет слева по центру */
+    }
+
+    div span {
+        color: mediumvioletred;
+        font-size: 40px;
+    }
+    </style>
+</head>
+<body>
+    <p class="orange">
+        <a class="no-underlining" href="#">item</a>
+        <a href="#">item</a>
+        <a href="#">item</a>
+        <span>text</span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro maxime libero delectus repellendus vel unde eius illum aspernatur hic molestias, at illo inventore officiis ab provident error corrupti dolore. 
+    </p>
+    <p>
+        <a href="#">item</a>
+        <a href="#">item</a>
+        text here text here
+    </p>
+    <p>
+        <span class="standart-font">text</span>
+    </p>
+
+    <div>
+        <span>some text</span>
+    </div>
+
+    <div class="second-container"></div>
+</body>
+</html>

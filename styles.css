@@ -1,0 +1,68 @@
+/* Примеры базовых стилей для элементов:
+    - у <body></body> обнуляем margin, если мы хотим задать какой-то бэкграунд <div></div>,
+    чтоб div был на всю ширину страницы;
+    - у <table></table> прописываем border-collapse: collapse;
+    - у <ul></ul>/<ol></ol> --> margin-top и margin-bottom, padding-left
+    также можно list-style: none, чтоб убрать маркеры совсем.
+
+    У блока стили записываются "по часовой":
+    а) top;
+    б) right;
+    в) bottom;
+    г) left.
+
+    В dev.tools значения можно изменять, нажимая клавиши "вверх" и "вниз".
+
+    Для отступов между элементами используется margin. 
+    Для отстпов между контейнером и содержимым используется padding.
+
+    ДЛЯ СЛЕДУЮЩЕЙ ДОМАШКИ (со списком):
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+    } */
+
+    /* --- */
+
+    body {
+        margin: 0;
+        background-color: rgb(143, 139, 139);
+    }
+
+    .orange {
+        color: orange;
+    }
+
+    .orange a {
+        color: green;
+    }
+
+    .no-underlining {
+        text-decoration: none;
+    }
+
+    p span {
+        color: blue;
+        font-size: 20px;
+    }
+
+    p a {
+        color: red;
+    }
+
+    p .standart-font {
+        font-size: 16px;
+    }
+
+    .second-container {
+        margin-top: 100px;
+        width: 400px;
+        height: 400px;
+        background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Some-are-different-wide-images-PIC-WPB009649.jpg");
+        background-color: red;
+        background-size: contain;
+        
+        background-position: 50%;
+    }
